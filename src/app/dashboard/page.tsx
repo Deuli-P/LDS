@@ -5,7 +5,7 @@ const Page = () => {
   return (
     <div>
         Hello world
-        <Link   href={`/dashboard/${id}`} >
+        <Link   href={`/dashboard/`} >
             Click me
         </Link>
     </div>
