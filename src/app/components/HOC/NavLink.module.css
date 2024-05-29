@@ -1,0 +1,22 @@
+.navLink {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-family: 'TheMunday';
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 0 65px; /* padding du header-menu + largeur du logo + margin du h1 */
+  color: var(--White);
+}
+
+.active {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-family: 'TheMunday';
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 0 65px;
+  color: var(--DarkPurple);
+  background-color: rgb(127, 199, 217);
+}
