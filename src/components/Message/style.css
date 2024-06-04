@@ -1,0 +1,24 @@
+div.message {
+    padding: 5px;
+}
+div.message > p {
+    border-radius: 10px;
+    padding: 5px 10px;
+    height: auto;
+    margin: 10px 0;
+}
+div.message p:nth-child(n) {
+    background-color: blue;
+    margin-right: 40%;
+}
+div.message p:nth-child(2) {
+    background-color: red;
+    margin-right: 0px;
+    text-align: end;
+    padding-right: 10px;
+    margin-left: 40%;
+}
+div.message p:last-child {
+    background-color: blue;
+    text-align: start;
+}
