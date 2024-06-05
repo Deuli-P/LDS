@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
+import { roboto } from "../../public/fonts/Roboto";
 import Header from "../components/HOC/Header";
 import Footer from "../components/HOC/Footer";
 import Providers from "@/lib/providers";
-
 import "./styles/globals.css";
 import "./styles/home.css";
 
@@ -23,13 +22,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <Providers>
-        <body className={inter.className}>
-        <Header />
-        <main /* className="flex min-h-screen flex-col items-center justify-between" */>
-          {children}
-        </main>
-        <Footer />
-      </body>
+        <body className={roboto.variable}>{children}</body>
       </Providers>
     </html>
   );
