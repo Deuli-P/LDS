@@ -1,9 +1,43 @@
-import Image from "next/image";
+"use client";
+import React from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+    <>
+      <div className="home">
+        <Link href="/feed/user/dashboard">
+          <img
+            src="/Logo-Couleur.jpg"
+            alt="Logo SignsConnect"
+            className="home-logo"
+          />
+        </Link>
+
+        <div className="home-btn-ctn">
+          <button
+            className="home-btn dictionnary"
+            type="button"
+            onClick={() => router.push("/dictionnaire-LSF")}
+          >
+            Dictionnaire
+          </button>
+          <button
+            className="home-btn signin"
+            type="button"
+            onClick={() => router.push("/connexion")}
+          >
+            Se connecter
+          </button>
+        </div>
+
+        <p className="home-description">Application de traduction de la langue de signes française</p>
+      </div>
+
+      {/* <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
           <code className="font-mono font-bold">src/app/page.tsx</code>
@@ -107,7 +141,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
-    </main>
+      </div> */}
+    </>
   );
 }
