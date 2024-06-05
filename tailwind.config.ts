@@ -27,7 +27,9 @@ const config: Config = {
     },
     extend: {
       fontFamily:{
-        roboto: ['var(--roboto)']
+        roboto: ['var(--roboto)'],
+        chopin: ['var(--chopin)'],
+        munday: ['var(--munday)']
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

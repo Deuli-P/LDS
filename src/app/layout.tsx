@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { roboto } from "../../public/fonts/Roboto";
+import { chopin } from "../../public/fonts/Chopin";
+import { munday } from "../../public/fonts/Munday";
 import Header from "../components/HOC/Header";
 import Footer from "../components/HOC/Footer";
 import Providers from "@/lib/providers";
@@ -22,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <Providers>
-        <body className={roboto.variable}>{children}</body>
+        <body className={`${roboto.variable} ${chopin.variable} ${munday.variable}`}>{children}</body>
       </Providers>
     </html>
   );

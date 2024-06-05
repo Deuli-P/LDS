@@ -1,6 +1,6 @@
-/* .container {
-    position: relative;
-} */
+.container p{
+    color:wheat;
+}
 .chatContainer {
     position: relative;
     margin-top: -10px;

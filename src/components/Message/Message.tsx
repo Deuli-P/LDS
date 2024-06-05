@@ -17,8 +17,8 @@ const Messages = [
 const Message = () => {
   return (
     <div>
-      <div className='message' style={{width: '100%'}}>
-        <p>This is the test</p>
+      <div className='message text-white' style={{width: '100%'}}>
+        <p className='text-blanc'>This is the test</p>
         <p>1st response</p>
         <p>2nd response</p>
         <p>3rd response</p>

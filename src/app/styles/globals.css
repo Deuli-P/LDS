@@ -36,12 +36,12 @@ body {
 
   @font-face {
     font-family: 'TheMunday';
-    src: url('../../../public/fonts/TheMunday.ttf');
+    src: url('../../../public/fonts/Munday/TheMunday.ttf');
   }
 
   @font-face {
     font-family: 'Chopin';
-    src: url('../../../public/fonts/Chopin-Light.ttf');
+    src: url('../../../public/fonts/Chopin/Chopin-Light.ttf');
   }
 
   .text-balance {
