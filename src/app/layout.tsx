@@ -11,7 +11,7 @@ import "./styles/home.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SignsConnect",
+  title: "Signs Connect",
   description: "Application de traduction de langue des signes française",
 };
 

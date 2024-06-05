@@ -1,0 +1,23 @@
+/* .container {
+    position: relative;
+} */
+.chatContainer {
+    position: relative;
+    margin-top: -10px;
+}
+.chatBox {
+    position: absolute;
+    margin: 5px;
+}
+.entryContainer {
+    position: absolute;
+    bottom: 0;
+    height: 38vh;
+    max-width: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.videoContainer,
+.avatarContainer {
+    margin: 10px;
+}
