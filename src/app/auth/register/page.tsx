@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export default function SignUp() {
   
   const [lastname, setLastname] = useState("");
-  const [firstname, seFirstname] = useState("");
+  const [firstname, setFirstname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
@@ -33,7 +33,7 @@ export default function SignUp() {
             type="text"
             name="firstname"
             value={firstname}
-            onChange={(e) => seFirstname(e.target.value)}
+            onChange={(e) => setFirstname(e.target.value)}
           />
           <label htmlFor="email">Email *</label>
           <input
