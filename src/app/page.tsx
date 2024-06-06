@@ -11,12 +11,9 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const router = useRouter();
 
-  const handleTest = () => {
-    console.log("Hello:");
-  };
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+      {/* <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         
         <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
 
@@ -44,11 +41,13 @@ export default function Home() {
           </CtaThirdy>
         </div>
 
-      </div>
+      </div> */}
       <div className="home">
         <Link href="/feed/user/dashboard">
           <Image
-            src="/Logo-Couleur.jpg"
+            src="/assets/logo/Logo-Couleur.jpg"
+            width={100}
+            height={100}
             alt="Logo SignsConnect"
             className="home-logo"
           />
