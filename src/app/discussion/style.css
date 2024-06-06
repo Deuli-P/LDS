@@ -7,7 +7,7 @@
 }
 .chatBox {
     position: absolute;
-    margin: 5px;
+    margin: 5px 5px 0 0;
 }
 .entryContainer {
     position: absolute;

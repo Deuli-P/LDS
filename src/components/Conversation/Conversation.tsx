@@ -1,9 +1,10 @@
 import React from 'react'
 import Message from '@/components/Message/Message'
+import './style.css'
 
 const Conversation = () => {
   return (
-    <div style={{width: '90vh', height: '62vh', backgroundColor:'white'}}>
+    <div className='convBox'>
       <Message></Message>
     </div>
   )

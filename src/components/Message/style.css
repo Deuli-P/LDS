@@ -1,5 +1,5 @@
 div.message {
-    padding: 5px;
+    padding: 5px 10px 5px 5px;
 }
 div.message > p {
     border-radius: 10px;
@@ -7,18 +7,14 @@ div.message > p {
     height: auto;
     margin: 10px 0;
 }
-div.message p:nth-child(n) {
+div.message p.guest {
     background-color: blue;
     margin-right: 40%;
 }
-div.message p:nth-child(2) {
+div.message p.user {
     background-color: red;
-    margin-right: 0px;
+    margin-right: 0;
     text-align: end;
     padding-right: 10px;
     margin-left: 40%;
-}
-div.message p:last-child {
-    background-color: blue;
-    text-align: start;
 }

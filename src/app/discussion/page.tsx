@@ -7,6 +7,7 @@ import './style.css'
 
 
 const Page = () => {
+  let srcEntry = 'true';
   return (
     <div className='container'>
       <div className='chatContainer'>
@@ -16,7 +17,12 @@ const Page = () => {
       </div>
       <div className='entryContainer'>
         <div className='videoContainer'>
-          <Camera></Camera>
+          { srcEntry === 'true' &&
+            <Camera></Camera>
+          }
+          { srcEntry === 'false' &&
+            <input type="text" />
+          }
         </div> 
         <div className='avatarContainer'>
           <Avatar></Avatar>
