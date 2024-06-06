@@ -39,7 +39,7 @@ export default function SignIn() {
 
         <p className="signin_to_up">Pas encore de compte ? </p>
         <p className="signin_to_up link">
-          <Link href="/enregistrement">Vous pouvez en créer un.</Link>
+          <Link href="/auth/register">Vous pouvez en créer un.</Link>
         </p>
       </section>
     </>

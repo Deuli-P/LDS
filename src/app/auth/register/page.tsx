@@ -55,7 +55,7 @@ export default function SignUp() {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <p className="CGVUs-warning">En validant l`&apos;`inscrption vous acceptez <Link href="/cgvu">les CGVUs, la politique de confidentialité et la gestion des données.</Link></p>
+          <p className="CGVUs-warning">En validant l&apos;inscrption vous acceptez <Link href="/cgvu">les CGVUs, la politique de confidentialité et la gestion des données.</Link></p>
           <button className="signup-btn" type="submit">Enregistrement</button>
         </form>
 

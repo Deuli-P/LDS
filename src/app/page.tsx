@@ -64,7 +64,7 @@ export default function Home() {
           <button
             className="home-btn signin"
             type="button"
-            onClick={() => router.push("/connexion")}
+            onClick={() => router.push("/auth/connexion")}
           >
             Se connecter
           </button>
