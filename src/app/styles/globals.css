@@ -1,0 +1,393 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --DarkPurple: rgb(15, 16, 53);
+  --Yellow: rgb(251, 168, 52);
+  --LightBlue: rgb(127, 199, 217);
+  --LightGrey: rgb(192, 197, 205);
+  --White: rgb(240, 240, 240);
+  --Black: rgb(5, 5, 5);
+  --Red: rgb(199, 18, 18);
+  --title: 'TheMunday';
+  --text: 'Chopin';
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+
+  @font-face {
+    font-family: 'TheMunday';
+    src: url('../../../public/fonts/Munday/TheMunday.ttf');
+  }
+
+  @font-face {
+    font-family: 'Chopin';
+    src: url('../../../public/fonts/Chopin/Chopin-Light.ttf');
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+
+  /* GENERALES */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    font-family: var(--text);
+    color: var(--Black);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    text-align: center;
+    font-family: var(--title);
+    color: var(--DarkPurple);
+  }
+
+  main h2 {
+    font-size: 35px;
+  }
+
+  main h3 {
+    font-size: 30px;
+  }
+
+  footer h4 {
+    font-size: 20px;
+  }
+
+  section {
+    width: 90%;
+    margin-bottom: 75px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* HEADER */
+
+  header {
+    width: 100%;
+    margin: 0 auto 50px auto;
+    padding: 25px 0;
+    background-color: rgb(15, 16, 53);
+  }
+
+  .header-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  .header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 25px;
+  }
+
+  .header-logo_div {
+    display: flex;
+  }
+
+  .logo-img {
+    width: 30px;
+  }
+
+  .header-logo_div h1 {
+    line-height: 24px;
+    font-size: 24px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    color: rgb(127, 199, 217);
+  }
+
+  .header-pic {
+    color: var(--White);
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 25px;
+  }
+
+  /* Style des navlink dans le module.css associé */
+
+  /* FOOTER */
+
+  footer {
+    width: 100%;
+    padding: 25px;
+    background-color: var(--DarkPurple);
+  }
+
+  article {
+    margin-bottom: 25px;
+  }
+
+  footer h4 {
+    font-family: var(--text);
+    font-weight: 900;
+    text-align: left;
+    color: var(--White);
+
+  }
+
+  footer p {
+    color: var(--White);
+  }
+
+  /* CONNEXION */
+
+  .signin-ctn h2 {
+    text-transform: uppercase;
+  }
+
+  .signin-ctn form,
+  .dashboard-ctn form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0 75px 0;
+    padding: 20px;
+    background-color: var(--Yellow);
+    border-radius: 10px;
+  }
+
+  .signin-ctn input,
+  .dashboard-ctn input {
+    height: 50px;
+    margin: 5px 0 25px 0;
+    padding-left: 10px;
+    border-radius: 10px;
+    background-color: var(--White);
+    color: var(--Black);
+  }
+
+  .signin-ctn input::placeholder,
+  .dashboard-ctn input::placeholder {
+    color: rgb(20, 20, 20);
+  }
+
+  .action-btn,
+  .signin-btn,
+  .signup-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    padding: 10px 20px;
+    font-family: 'TheMunday';
+    background-color: var(--DarkPurple);
+    color: var(--White);
+    border: none;
+    border-radius: 10px;
+  }
+
+  .signin-btn {
+    width: 125px;
+  }
+
+  .signup-btn {
+    width: 200px;
+  }
+
+  .signin_to_up {
+    text-align: center;
+    margin: 50px 0 0 0;
+  }
+
+  .link {
+    font-weight: 900;
+    margin: 0;
+    color: var(--DarkPurple);
+  }
+
+  .CGVUs-warning {
+    text-align: justify;
+    margin-bottom: 25px;
+  }
+
+  /* CONVERSATION */
+
+  .conversation-ctn {
+    z-index: 10;
+  }
+
+  .conversation-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .other-div {
+    align-items: start;
+  }
+
+  .me-div {
+    align-items: end;
+  }
+
+  .new-div {
+    align-items: center;
+  }
+
+  .conversation-bulle {
+    width: 85%;
+    padding: 10px;
+    margin: 2px 0;
+    color: var(--Black);
+    border-radius: 10px;
+  }
+
+  .me {
+    background-color: var(--Yellow);
+  }
+
+  .other {
+    background-color: var(--LightBlue);
+  }
+  .new {
+    background-color: var(--LightGrey);
+  }
+
+  .translation {
+    width: 250px;
+    margin-top: 25px;
+  }
+
+  .send-message {
+    position: fixed;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 10px;
+    background-color: var(--Yellow);
+  }
+
+  .send-message input {
+    width: 60%;
+    height: 30px;
+    border-radius: 50px;
+    padding: 0 10px;
+  }
+
+  .send-message input::placeholder {
+    color: var(--DarkPurple);
+  }
+
+  .back-pic {
+    position: sticky;
+    z-index: 50;
+    top: 20px;
+    background-color: var(--Yellow);
+    width: 120px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+    font-family: 'TheMunday';
+    background-color: var(--DarkPurple);
+    color: var(--White);
+    border: none;
+    border-radius: 10px;
+  }
+
+  .send-pic {
+    color: var(--DarkPurple);
+  }
+
+  /* COMPTE UTILISATEUR */
+
+
+  .conversation-btn-div {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+  }
+
+  .conversation-btn,
+  .password-modify,
+  .delete-account {
+    width: auto;
+    margin: 25px auto;
+    padding: 10px 15px;
+    font-family: 'TheMunday';
+    text-align: center;
+    background-color: var(--DarkPurple);
+    color: var(--White);
+    border: none;
+    border-radius: 10px;
+  }
+
+  .conversation-btn {
+    width: auto;
+  }
+
+  .password-modify {
+    width: 200px;
+    color: var(--DarkPurple);
+    background-color: var(--LightBlue);
+  }
+  .delete-account {
+    width: 200px;
+    color: var(--White);
+    background-color: var(--Red);
+  }
+
+
+}

@@ -1,6 +1,6 @@
 import React from 'react'
-import Femme from '@/../../LDS/public/img/1.png'
-import Image from 'next/image'
+import Femme from '@/../../LDS/public/assets/images/avatar/blonde-lamy.png'
+import Image from 'next/image';
 
 const Avatar = () => {
   return (
