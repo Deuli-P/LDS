@@ -1,24 +1,25 @@
 'use client'
-import React from 'react'
+import { useEffect } from 'react'
 
 const Camera = () => {
-
-  const video = document.querySelector('video')
+  
   const contraints = {
-    audio: true,
+    audio: false,
     video: true
   };
 
+  useEffect(()=> {
+  const video = document.querySelector("#video-camera")
   navigator.mediaDevices
     .getUserMedia(contraints)
     .then((stream) => {
       const videoTracks = stream.getVideoTracks();
       console.log('Flux obtenu avec des contraintes :', contraints);
       console.log(`Utilisation de l'appareil vidéo : ${videoTracks[0].label}`);
+      video.srcObject = stream
       stream.onremovetrack = () => {
         console.log('Flux terminé');
       };
-      video.srcObject = stream
     })
     .catch((error) => {
       if(error.name === "ConstraintNotStatisfiedError") {
@@ -35,11 +36,12 @@ const Camera = () => {
         console.error(`Erreur getUserMedia : ${error.name}`, error)
       }
     })
+  },[])
   
   return (
-    <div className='camera'>
-      <video src="">Video is here</video>
-    </div>
+    <div className='h-500 h-300 border-rouge border-1' >
+        <video autoPlay playsInline id="video-camera" className='size-full  bg-red-400'></video>
+      </div>
   )
 }
 

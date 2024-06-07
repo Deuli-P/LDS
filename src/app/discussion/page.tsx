@@ -7,7 +7,9 @@ import './style.css'
 
 
 const Page = () => {
-  let srcEntry = 'true';
+  let srcEntry:boolean = true;
+
+
   return (
     <div className='container'>
       <div className='chatContainer'>
@@ -17,11 +19,11 @@ const Page = () => {
       </div>
       <div className='entryContainer'>
         <div className='videoContainer'>
-          { srcEntry === 'true' &&
-            <Camera></Camera>
-          }
-          { srcEntry === 'false' &&
+            <Camera/>
+          { srcEntry ?
             <input type="text" />
+            :
+            null
           }
         </div> 
         <div className='avatarContainer'>
