@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --title: 'TheMunday';
+  --text: 'Chopin';
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+
+  @font-face {
+    font-family: 'TheMunday';
+    src: url('../../public/fonts/TheMunday.ttf');
+  }
+
+  @font-face {
+    font-family: 'Chopin';
+    src: url('../../public/fonts/Chopin-Light.ttf');
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    font-family: var(--text);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    text-align: center;
+    font-family: var(--title);
+  }
+
+  .text-fontText {
+    font-family: var(--text);
+  }
+  .text-fontTitle {
+    font-family: var(--title);
+  }
+  .scale-h-102:hover {
+    transform: scale(1.02);
+  }
+
+  input::placeholder {
+    font-family: var(--text);
+    color: rgb(20, 20, 20);
+  }
+
+}

@@ -21,18 +21,18 @@ function Header() {
   return (
     <>
       {!home && (
-        <header>
-          <div className="header-ctn">
-            <div className="header-menu">
-              <div className="header-logo_div">
-                <Link href="/"><img className="logo-img" src="/Logo-Header.png" alt="Logo SignsConnect" /></Link>
-                <h1>Signs Connect</h1>
+        <header className="bg-purple w-full mx-auto py-6">
+          <div className="w-full flex flex-col items-center m-auto">
+            <div className="w-full flex items-center justify-between px-10">
+              <div className="flex header-logo_div">
+                <Link href="/" onClick={toggleMenu} ><img className="w-12" src="/assets/logo/Logo-Header.png" alt="Logo SignsConnect" /></Link>
+                <h1 className="text-[24px]/[24px] ml-3.5 uppercase text-lightBlue">Signs Connect</h1>
               </div>
-              <FontAwesomeIcon icon={faBars} size="xl" className={menuHidden ? "header-pic" : "hidden"} onClick={toggleMenu} />
-              <FontAwesomeIcon icon={faXmark} size="xl" className={menuHidden ? "hidden" : "header-pic"} onClick={toggleMenu} />
+              <FontAwesomeIcon icon={faBars} size="xl" className={menuHidden ? "text-white" : "hidden"} onClick={toggleMenu} />
+              <FontAwesomeIcon icon={faXmark} size="xl" className={menuHidden ? "hidden" : "text-white"} onClick={toggleMenu} />
             </div>
 
-            <nav className={!menuHidden ? "" : "hidden"} onClick={toggleMenu}>
+            <nav className={!menuHidden ? "w-full flex flex-col items-start mt-6" : "hidden"} onClick={toggleMenu}>
               <NavLink href="/">Accueil</NavLink>
               {!signin && !signup && (
                 <>

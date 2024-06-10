@@ -3,8 +3,6 @@ import React from 'react';
 import { usePathname } from 'next/navigation'
 import Link from 'next/link';
 
-import styles from './NavLink.module.css';
-
 const NavLink = ({ href, children }) => {
 
   const pathname = usePathname();
@@ -12,7 +10,7 @@ const NavLink = ({ href, children }) => {
 
   return (
     <Link href={href} legacyBehavior>
-      <a className={isActive ? styles.active : styles.navLink}>{children}</a>
+      <a className={isActive ? "bg-lightBlue text-darkPurple w-full h-20 text-[20px]/[54px] text-fontTitle uppercase px-28" : "text-white w-full h-20 text-[20px]/[54px] text-fontTitle uppercase px-28 hover:bg-lightBlue hover:text-purple"}>{children}</a>
     </Link>
   );
 };

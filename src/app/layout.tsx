@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import Header from "./components/HOC/Header";
-import Footer from "./components/HOC/Footer";
+import Header from "../components/HOC/Header";
+import Footer from "../components/HOC/Footer";
 
-import "./styles/globals.css";
-import "./styles/home.css";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +24,7 @@ export default function RootLayout({
 
         <Header />
 
-        <main /* className="flex min-h-screen flex-col items-center justify-between" */>
+        <main className="flex flex-col items-center">
           {children}
         </main>
         
