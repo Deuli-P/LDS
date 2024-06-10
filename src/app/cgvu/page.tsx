@@ -2,9 +2,8 @@
 import React from "react";
 
 export default function CGVUS() {
+
   
-
-
   return (
     <>
       <section className="signin-ctn">

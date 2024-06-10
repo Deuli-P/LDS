@@ -1,50 +1,55 @@
 "use client";
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import InlineInput from "@/components/Input/Inline";
 
 export default function SignUp() {
   
-  const [lastname, setLastname] = useState("");
-  const [firstname, setFirstname] = useState("");
-  const [email, setEmail] = useState("");
+  const [lastname, setLastname] = useState<string>("");
+  const [firstname, setFirstname] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState("");
   const router = useRouter();
 
+  const SubmitForm = (e) => {
+    e.preventDefault
+    console.log("Submit");
+    
+  }
+
   return (
-    <>
-      <section className="signin-ctn">
-        <h2>Créer son compte</h2>
+      <section className="w-full flex flex-col items-center px-4 py-8">
+        <h2>Inscription</h2>
 
-        <form action="">
-          <label htmlFor="email">Nom *</label>
-          <input
-            required
-            placeholder="Votre Nom"
-            type="text"
-            name="lastname"
-            value={lastname}
-            onChange={(e) => setLastname(e.target.value)}
-          />
-          <label htmlFor="firstname">Prénom *</label>
-          <input
-            required
-            placeholder="Votre prénom"
-            type="text"
-            name="firstname"
-            value={firstname}
-            onChange={(e) => setFirstname(e.target.value)}
-          />
-          <label htmlFor="email">Email *</label>
-          <input
-            required
-            placeholder="Votre email"
-            type="email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-
+        <form action="submit" className="flex flex-col bg-primary rounded-lg p-3">
+          <div className="flex flex-col gap-4 md:flex-row md:gap-4">
+            <InlineInput
+              type='text'
+              label="Prenom"
+              required={true}
+              placeholder="Votre Prenom"
+              value={firstname}
+              onChange={(e)=>{setFirstname(e.target.value)}}
+            />
+            <InlineInput
+              type='text'
+              label="Nom"
+              required={true}
+              placeholder="Votre Nom"
+              value={lastname}
+              onChange={(e)=>{setLastname(e.target.value)}}
+            />
+          </div>
+            <InlineInput
+              type='email'
+              label="Email"
+              required={true}
+              placeholder="Votre Email"
+              value={email}
+              onChange={(e)=>{setEmail(e.target.value)}}
+            />
           <label htmlFor="password">Mot de passe *</label>
           <input
             required
@@ -64,6 +69,5 @@ export default function SignUp() {
           <Link href="/connexion">Connectez-vous.</Link>
         </p>
       </section>
-    </>
   );
 }
