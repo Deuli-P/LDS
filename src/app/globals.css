@@ -4,8 +4,8 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 228, 233, 247;
+  --background-end-rgb: 228, 233, 247;
   --title: 'TheMunday';
   --text: 'Chopin';
 }
@@ -13,16 +13,14 @@
 @media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 255, 255, 255;
-    --background-end-rgb: 255, 255, 255;
+    --background-start-rgb: 228, 233, 247;
+    --background-end-rgb: 228, 233, 247;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background-color: rgb(var(--background-end-rgb));
 }
 
 @layer utilities {
@@ -75,7 +73,7 @@ body {
     font-family: var(--title);
   }
   .scale-h-102:hover {
-    transform: scale(1.02);
+    transform: scale(1.02) translate(auto);
   }
 
   input::placeholder {

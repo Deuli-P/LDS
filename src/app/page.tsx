@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <div className="relative w-full h-screen home">
-        <Link href="/feed/user/dashboard">
+        <Link href="user/dashboard">
           <img
             src="/assets/logo/Logo-Couleur-FondTransparentC.png"
             alt="Logo SignsConnect"
@@ -19,7 +19,7 @@ export default function Home() {
 
         <div className="absolute flex justify-between right-1/2 top-1/2 translate-x-1/2 mt-12">
           <button
-            className="bg-lightGrey w-60 mx-2.5 py-2.5 rounded-full text-fontTitle scale-h-102 cursor-pointer"
+            className="bg-lightBlue w-60 mx-2.5 py-2.5 rounded-full text-fontTitle scale-h-102 cursor-pointer"
             type="button"
             onClick={() => router.push("/dictionnaire-LSF")}
           >

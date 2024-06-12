@@ -13,17 +13,23 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      boxShadow: {
+        'first': '0 5px 15px -5px rgba(0, 0, 0, 0.9)',
+      },
     },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
       'white': 'rgb(240, 240, 240)',
       'black': 'rgb(5, 5, 5)',
-      'purple': 'rgb(15, 16, 53)',
-      'yellow': 'rgb(251, 168, 52)',
-      'lightBlue': 'rgb(127, 199, 217)',
-      'lightGrey': 'rgb(192, 197, 205)',
-      'red': 'rgb(199, 18, 18)',
+      'purple': 'rgb(8, 13, 27)', //'#080D1B'
+      'yellow': 'rgb(238, 139, 17)', //'#EE8B11'
+      'background': 'rgb(228, 233, 247)', //'#E4E9F7'
+      'foreGround': 'rgb(201, 217, 239)', //'#C9D9EF'
+      'lightBlue': 'rgb(138, 178, 219)', //'#8AB2DB'
+      'lightpurple': 'rgb(146, 128, 255)', //'#8E80F3'
+      'blue': 'rgb(50, 17, 232)', //'#3211E8'
+      'red': 'rgb(126, 14, 14)', //'#7E0E0E'
     },
   },
   plugins: [],

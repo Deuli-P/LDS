@@ -27,8 +27,8 @@ const NewChat = () => {
         <h2 className="uppercase text-[35px] mt-10">Nouvelle Conversation</h2>
 
         <div className="flex flex-col items-center">
-          <img src="/assets/images/avatar.jpg" alt="avatar LDS" className="w-[250px] mt-10 p-4 rounded-2xl bg-lightGrey"/>
-          <p className="w-[85%] my-1 p-4 rounded-2xl bg-lightGrey">Ecrivez un message ou envoyez un message vocal et je le traduirait en Langue des Signes Française pour vous.</p>
+          <img src="/assets/images/avatar.jpg" alt="avatar LDS" className="w-[250px] mt-10 p-4 rounded-2xl bg-lightBlue"/>
+          <p className="w-[85%] my-1 p-4 rounded-2xl bg-lightBlue">Ecrivez un message ou envoyez un message vocal et je le traduirait en Langue des Signes Française pour vous.</p>
         </div>
       </section>
 
