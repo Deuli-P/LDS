@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from 'next/image'
 
 export default function Dictionary() {
   
@@ -12,7 +13,7 @@ export default function Dictionary() {
 
         <article>
           <h3>Alphabet</h3>
-          <img src="/images/AlphabetLSF.jpg" alt="Alphabet langue des signes française" />
+          <Image src="/images/AlphabetLSF.jpg" width={100} height={100} alt="Alphabet langue des signes française" />
         </article>
 
         <article>

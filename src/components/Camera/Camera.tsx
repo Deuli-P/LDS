@@ -1,6 +1,9 @@
 'use client'
 import { useEffect } from 'react'
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowAltCircleUp, faCamera, faImage, faMicrophone } from "@fortawesome/free-solid-svg-icons";
+
 const Camera = () => {
   
   /**
@@ -50,11 +53,30 @@ const Camera = () => {
         }
       })
   },[])
+
+  let user = 'me'
   
   return (
     <div className='h-500 h-300 border-rouge border-1' >
-        <video autoPlay playsInline id="video-camera" className='size-1/2  bg-red-400'></video>
-      </div>
+      {user === 'other' ? 
+        <>
+          <form className="send-message">
+            <button><FontAwesomeIcon icon={faImage} size="lg" className="send-pic"/></button>
+            <button><FontAwesomeIcon icon={faCamera} size="lg" className="send-pic"/></button>
+            <button><FontAwesomeIcon icon={faMicrophone} size="lg" className="send-pic"/></button>
+            <input type="text" name="message" placeholder="Aa"/>
+            <button><FontAwesomeIcon icon={faArrowAltCircleUp} size="lg" className="send-pic"/></button>
+          </form> 
+        </>
+        
+        : user === 'me' ?
+          <>
+            <video autoPlay playsInline id="video-camera" className='size-1/2  bg-red-400'></video> 
+          </>
+          :
+          null
+      }
+    </div>
   )
 }
 

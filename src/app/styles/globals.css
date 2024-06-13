@@ -271,6 +271,13 @@ body {
     display: flex;
     flex-direction: column;
   }
+  .conversation-div:first-child {
+    margin-top: 0;
+  }
+
+  .conversation-div:nth-child(n+2) {
+    margin-top: 10px;
+  }
 
   .other-div {
     align-items: start;
@@ -288,7 +295,7 @@ body {
     width: 85%;
     padding: 10px;
     margin: 2px 0;
-    color: var(--Black);
+    /* color: var(--Black); */
     border-radius: 10px;
   }
 

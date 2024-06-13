@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import Link from 'next/link';
+import Image from 'next/image'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft, faArrowAltCircleUp, faCamera, faImage, faMicrophone } from "@fortawesome/free-solid-svg-icons";
@@ -19,7 +20,6 @@ const Chat = () => {
       
       <Link href="/user/dashboard" className="back-pic"><FontAwesomeIcon icon={faArrowAltCircleLeft} size="lg" /> Retour</Link>
 
-
       <section className="conversation-ctn">
         <h2>Conversation</h2>
 
@@ -30,7 +30,12 @@ const Chat = () => {
 
 
         <div className="conversation-div me-div">
-          <img src="/images/avatar.jpg" alt="avatar LDS" className="conversation-bulle translation me"/>
+          {/* <img src="/images/avatar.jpg" alt="avatar LDS" className="conversation-bulle translation me"/> */}
+          <Image 
+            src="/images/avatar.jpg"
+            alt="avatar LDS"
+            className='conversation-bulle translation me'
+          ></Image>
           <p className="conversation-bulle me">Temporibus facilis exercitationem dolores cumque! Tempora optio perspiciatis dolorum earum, quo praesentium?</p>
         </div>
 
@@ -40,7 +45,12 @@ const Chat = () => {
         </div>
 
         <div className="conversation-div me-div">
-          <img src="/images/avatar.jpg" alt="avatar LDS" className="conversation-bulle translation me"/>
+          {/* <img src="/images/avatar.jpg" alt="avatar LDS" className="conversation-bulle translation me"/> */}
+          <Image 
+            src="/images/avatar.jpg"
+            alt="avatar LDS"
+            className='conversation-bulle translation me'
+          ></Image>
           <p className="conversation-bulle me">Reiciendis adipisci beatae consequuntur veniam eaque, porro velit eum harum eveniet quo.</p>
         </div>
 
@@ -49,7 +59,12 @@ const Chat = () => {
           <p className="conversation-bulle other">Molestias nemo vitae consequatur recusandae neque eaque vero magnam saepe repudiandae ab.</p>
         </div>
         <div className="conversation-div me-div">
-          <img src="/images/avatar.jpg" alt="avatar LDS" className="conversation-bulle translation me"/>
+          {/* <img src="/images/avatar.jpg" alt="avatar LDS" className="conversation-bulle translation me"/> */}
+          <Image 
+            src="/images/avatar.jpg"
+            alt="avatar LDS"
+            className='conversation-bulle translation me'
+          ></Image>
           <p className="conversation-bulle me">Temporibus facilis exercitationem dolores cumque! Tempora optio perspiciatis dolorum earum, quo praesentium?</p>
         </div>
 
@@ -59,7 +74,13 @@ const Chat = () => {
         </div>
 
         <div className="conversation-div me-div">
-          <img src="/images/avatar.jpg" alt="avatar LDS" className="conversation-bulle translation me"/>
+          {/* <img src="/images/avatar.jpg" alt="avatar LDS" className="conversation-bulle translation me" /> */}
+          <Image 
+            src="/images/avatar.jpg"
+            alt="avatar LDS"
+            className='conversation-bulle translation me'
+          >
+          </Image>
           <p className="conversation-bulle me">Reiciendis adipisci beatae consequuntur veniam eaque, porro velit eum harum eveniet quo.</p>
         </div>
 
@@ -76,7 +97,7 @@ const Chat = () => {
         <button><FontAwesomeIcon icon={faMicrophone} size="lg" className="send-pic"/></button>
         <input type="text" name="message" placeholder="Aa"/>
         <button><FontAwesomeIcon icon={faArrowAltCircleUp} size="lg" className="send-pic"/></button>
-       </form>
+      </form>
 
 
     </>
