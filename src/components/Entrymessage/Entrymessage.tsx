@@ -1,10 +1,10 @@
-'use client'
+
 import { useEffect } from 'react'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleUp, faCamera, faImage, faMicrophone } from "@fortawesome/free-solid-svg-icons";
 
-const Camera = () => {
+const Entrymessage = () => {
   
   /**
    * Contrainte d'utilisation pour getUserMedia
@@ -54,30 +54,28 @@ const Camera = () => {
       })
   },[])
 
-  let user = 'me'
+  let user = 'other'
   
   return (
     <div className='h-500 h-300 border-rouge border-1' >
       {user === 'other' ? 
         <>
-          <form className="send-message">
+          <form className="fixed z-20 flex items-center justify-between bottom-0 w-full h-[60px] px-2.5 bg-background-light">
             <button><FontAwesomeIcon icon={faImage} size="lg" className="send-pic"/></button>
             <button><FontAwesomeIcon icon={faCamera} size="lg" className="send-pic"/></button>
             <button><FontAwesomeIcon icon={faMicrophone} size="lg" className="send-pic"/></button>
-            <input type="text" name="message" placeholder="Aa"/>
+            <input className='rounded-full pl-2' type="text" name="message" placeholder="Aa"/>
             <button><FontAwesomeIcon icon={faArrowAltCircleUp} size="lg" className="send-pic"/></button>
           </form> 
         </>
         
-        : user === 'me' ?
+        : 
           <>
             <video autoPlay playsInline id="video-camera" className='size-1/2  bg-red-400'></video> 
           </>
-          :
-          null
       }
     </div>
   )
 }
 
-export default Camera
+export default Entrymessage

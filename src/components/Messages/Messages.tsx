@@ -8,7 +8,7 @@ import Image from 'next/image'
  * @param {String} content content of message response
  * @param {Date} dateTime 
  */
-const Messages = [
+const Msgs = [
   {
     id:0, /** auto increment */
     entry: 'audio',
@@ -74,23 +74,29 @@ const Messages = [
   }
 ]
 
-const Message = () => {
+const Messages = () => {
   return (
     <div>
-      <div className='message' style={{width: '100%'}}>
+      <div className='messages w-full bg-background-light p-1'>
 
-      {Messages.map((e) => (
+      {Msgs.map((e) => (
         <div key={e.id} className={`conversation-div ${e.username}-div`}>
-          {e.username} à {e.dateTime}
+          {/* <p className='text-background-dark'>{e.username}</p> */}
           {e.username === 'me' ? 
             e.entry === 'audio' ? (
               <>
                 <audio
                   src="/sons/what-is-that-101236.mp3"
                   controls
-                  className={`conversation-bulle bg-primary text-secondary w-250`}
+                  className={`conversation-bulle bg-background-light dark:bg-background-dark text-secondary w-250`}
                 ></audio>
-                <p className={`conversation-bulle bg-primary text-texte-dark`}>{e.content}</p>
+                  <div className={`conversation-bulle bg-background-light dark:bg-background-dark`}>
+                    <p className='text-texte-dark'>{e.content}</p>
+                    <p className='text-texte-dark space-x-48'>
+                      <span className='italic text-texte-light dark:text-texte-dark'>transcription</span>
+                      <span className='italic text-texte-light dark:text-texte-dark'>{e.dateTime}</span>  
+                    </p>
+                </div>
               </>
             ) : e.entry === 'video' ? (
               <>
@@ -99,22 +105,42 @@ const Message = () => {
                   alt="avatar LDS"
                   width={50}
                   height={50}
-                  className={`conversation-bulle w-250`}
+                  className={`conversation-bulle bg-background-light dark:bg-background-dark w-250`}
                 />
-                <p className={`conversation-bulle bg-primary text-texte-dark`}>{e.content}</p>
+                  <div className={`conversation-bulle bg-background-light dark:bg-background-dark`}>
+                    <p className='text-texte-dark'>{e.content}</p>
+                    <p className='text-texte-dark space-x-48'>
+                      <span className='italic text-texte-light dark:text-texte-dark'>transcription</span>
+                      <span className='italic text-texte-light dark:text-texte-dark'>{e.dateTime}</span>
+                    </p>
+                </div>
               </>
             ) : e.entry === 'text' ? (
-              <p className={`conversation-bulle bg-primary text-texte-dark`}>{e.content}</p>
+              <>
+                <div className={`conversation-bulle bg-background-light dark:bg-background-dark`}>
+                  <p className='text-texte-dark'>{e.content}</p>
+                  <p className='text-texte-dark space-x-48'>
+                    <span className='italic text-texte-light dark:text-texte-dark'>transcription</span>
+                    <span className='italic text-texte-light dark:text-texte-dark'>{e.dateTime}</span>
+                  </p>
+                </div>
+              </>
             ) : null
-            :
+          :
             e.entry === 'audio' ? (
               <>
                 <audio
                   src="/sons/what-is-that-101236.mp3"
                   controls
-                  className={`conversation-bulle bg-secondary text-texte-dark w-250`}
+                  className={`conversation-bulle bg-secondary-dark dark:bg-secondary-light text-texte-dark w-250`}
                 ></audio>
-                <p className={`conversation-bulle bg-secondary text-texte-dark`}>{e.content}</p>
+                  <div className={`conversation-bulle bg-secondary-dark dark:bg-secondary-light`}>
+                    <p className='text-texte-light dark:text-texte-dark'>{e.content}</p>
+                    <p className='text-texte-light dark:text-texte-dark space-x-48'>
+                      <span className='italic text-texte-light dark:text-texte-dark'>transcription</span>
+                      <span className='italic text-texte-light dark:text-texte-dark'>{e.dateTime}</span>
+                    </p>
+                  </div>
               </>
             ) : e.entry === 'video' ? (
               <>
@@ -123,12 +149,26 @@ const Message = () => {
                   alt="avatar LDS"
                   width={50}
                   height={50}
-                  className={`conversation-bulle w-250`}
+                  className={`conversation-bulle bg-secondary-dark dark:bg-secondary-light w-250`}
                 />
-                <p className={`conversation-bulle bg-secondary text-texte-dark`}>{e.content}</p>
+                  <div className={`conversation-bulle bg-secondary-dark dark:bg-secondary-light`}>
+                    <p className='text-texte-light dark:text-texte-dark'>{e.content}</p>
+                    <p className='text-texte-lighht dark:texte-texte-dark space-x-48'>
+                      <span className='italic text-texte-light dark:text-texte-dark'>transcription</span>
+                      <span className='italic text-texte-light dark:text-texte-dark'>{e.dateTime}</span>
+                    </p>
+                  </div>
               </>
             ) : e.entry === 'text' ? (
-              <p className={`conversation-bulle bg-secondary text-texte-dark`}>{e.content}</p>
+              <>
+                <div className={`conversation-bulle bg-secondary-dark dark:bg-secondary-light`}>
+                  <p className='text-texte-light dark:text-texte-dark'>{e.content}</p>
+                  <p className='text-texte-light dark:textr-texte-dark space-x-48'>
+                    <span className='italic text-texte-light dark:text-texte-dark'>transcription</span>
+                    <span className='italic text-texte-light dark:text-texte-dark'>{e.dateTime}</span>
+                  </p>
+                </div>
+              </>
             ) : null
           }
         </div>
@@ -140,7 +180,7 @@ const Message = () => {
   )
 }
 
-export default Message
+export default Messages
 
 {/* { Messages[0].entry === 'video' &&
           <p className="user">{Messages[0].content}</p>

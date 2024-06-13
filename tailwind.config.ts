@@ -20,24 +20,43 @@ const config: Config = {
       },
     },
     colors:{
-      'primary':'#EE8B11',
-      'primaryAccent':"#202981",
-      'secondary':"#244C75",
-      'secondaryAccent':"#F7A834",
-      'accent':"#3717EE",
+      transparent: 'transparent',
+      current: 'currentColor',
+      'background': {
+        'light' : 'rgb(228, 233, 247)', //'#E4E9F7'
+        'dark' : 'rgb(8, 13, 27)'
+      }, 
+      'foreGround': 'rgb(201, 217, 239)', //'#C9D9EF'
+      'primary':{
+        'light': 'rgb(8, 13, 27)', //'#080D1B'
+        'dark' : 'rgb(238, 139, 17)'
+      }, 
+      'secondary':{
+        'light' : "rgb(36, 76, 117)",
+        'dark' : 'rgb(138, 178, 219)',
+      },
+      'accent':{
+        'light' : "rgb(55, 23, 238)",
+        'dark' : 'rgb(153, 136, 244)'},
+      "texte" : {
+        'light' : "rgb(12, 26, 39)",
+        'dark' : 'rgb(216, 230, 243)'
+      },
+      
       'shadow':"#3C3939",
-      'noir':"#1E1F23",
-      'blanc':"#F4F4F4",
       'gris':"#D9D9D9",
-      'rouge':'#7E0E0E',
-      'background':"#E4E9F7",
+      'rouge':'rgb(126, 14, 14)',
       'foreground':"#C9D9EF",
       'error':"#DD8383",
       'valid':"#1EB937",
       "input": "#C9D4F0",
       "conversation": "#00A3E9",
-      "texte-light" : "#0C1A27",
-      "texte-dark" : "#D8E6F3"
+      'white': 'rgb(240, 240, 240)',
+      'black': 'rgb(5, 5, 5)',
+      'lightBlue': 'rgb(138, 178, 219)', //'#8AB2DB'
+      'lightpurple': 'rgb(146, 128, 255)', //'#8E80F3'
+      'blue': 'rgb(50, 17, 232)', //'#3211E8'
+      'red': 'rgb(126, 14, 14)', //'#7E0E0E'
     },
   },
   plugins: [],
