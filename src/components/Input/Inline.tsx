@@ -1,53 +1,52 @@
-import { InputType } from "@/lib/types";
+import { InputProps } from "@/lib/types";
 import React from "react";
 
 
 
 const InlineInput = ({
-  label,
-  onChange,
-  value,
   type,
+  label,
+  value,
+  name,
   required,
   placeholder,
-}: InputType) => {
+  error,
+  disabled,
+  onChange,
+}: InputProps) => {
   return (
-    <label className="flex flex-col items-start w-full text-blanc">
+    <label 
+      className="flex flex-col items-start w-full text-text-light dark:text-texte-dark"
+      htmlFor={name}
+    >
       {label}
       <input
         className="
+            border-0
+            focus:ring-1
+            focus:focus-primary-light
+            error:bg-error
+            rounded-lg
             mt-1
             block
             w-full
             px-3
             py-2
-            bg-input
-            text-noir
-            rounded-md
-            shadow-sm
-            placeholder-slate-400
-            focus:outline-none
-            focus:border-sky-500
-            focus:ring-1
-            focus:ring-secondary
-            disabled:bg-gris
-            disabled:text-input
-            disabled:border-slate-200
-            disabled:shadow-none
-            invalid:border-error
-            invalid:text-noir
-            focus:invalid:border-pink-500
-            focus:invalid:ring-pink-500
+            bg-background-light
+            dark:bg-foreground-light
+            text-texte-light
+            font-bold
             "
-        required={required}
-        value={value}
-        type={type}
-        onChange={onChange}
-        placeholder={placeholder}
+          type={type}
+          id={label}
+          value={value}
+          name={name}
+          placeholder={placeholder}
+          onChange={onChange}
+          disabled={disabled}
+          required={required}
       />
-      {type === "password" ? (
-        <p className="invisible peer-invalid:visible">{messageError}</p>
-      ) : null}
+      {error && <p className="error">Nécessaire</p>}
     </label>
   );
 };

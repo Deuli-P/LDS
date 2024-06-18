@@ -2,47 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --DarkPurple: rgb(15, 16, 53);
-  --Yellow: rgb(251, 168, 52);
-  --LightBlue: rgb(127, 199, 217);
-  --LightGrey: rgb(192, 197, 205);
-  --White: rgb(240, 240, 240);
-  --Black: rgb(5, 5, 5);
-  --Red: rgb(199, 18, 18);
-  --title: 'TheMunday';
-  --text: 'Chopin';
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 255, 255, 255;
-    --background-end-rgb: 255, 255, 255;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-}
 
 @layer utilities {
-
-  @font-face {
-    font-family: 'TheMunday';
-    src: url('../../../public/fonts/Munday/TheMunday.ttf');
-  }
-
-  @font-face {
-    font-family: 'Chopin';
-    src: url('../../../public/fonts/Chopin/Chopin-Light.ttf');
-  }
 
   .text-balance {
     text-wrap: balance;
@@ -50,66 +12,6 @@ body {
 
 
   /* GENERALES */
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    font-size: 62.5%;
-  }
-
-  body {
-    font-size: 16px;
-  }
-
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  p {
-    font-family: var(--text);
-    color: var(--Black);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    text-align: center;
-    font-family: var(--title);
-    color: var(--DarkPurple);
-  }
-
-  main h2 {
-    font-size: 35px;
-  }
-
-  main h3 {
-    font-size: 30px;
-  }
-
-  footer h4 {
-    font-size: 20px;
-  }
-
-  section {
-    width: 90%;
-    margin-bottom: 75px;
-  }
-
-  .hidden {
-    display: none;
-  }
 
   /* HEADER */
 

@@ -10,11 +10,15 @@ export type CTAType = {
 }
 
 
-export type InputType={
-    label: string,
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-    value: string;
-    type:string,
-    required:boolean,
-    placeholder:string,
-}
+
+export interface InputProps {
+    type: 'text' | 'number' | 'email' | 'password'
+    label: string
+    value: string | number
+    name: string
+    placeholder: string
+    error?: boolean
+    required: boolean
+    disabled?: boolean
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  }

@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <Providers>
-        <body className={`${roboto.variable} ${chopin.variable} ${munday.variable}`}>{children}</body>
+        <body className={` font-chopin ${roboto.variable} ${chopin.variable} ${munday.variable}`}>{children}</body>
       </Providers>
     </html>
   );
