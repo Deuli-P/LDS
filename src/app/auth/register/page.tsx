@@ -7,8 +7,6 @@ import InlineInput from "@/components/Input/Inline";
 import CtaSecondary from "@/components/CTA/cta-secondary";
 import CtaPrimary from "@/components/CTA/cta-primary";
 import Checkbox from "@/components/Input/Checkbox";
-import supabase from "@supabase/supabase-js";
-
 
 
 export default function SignUp() {
@@ -38,17 +36,11 @@ export default function SignUp() {
   }
 
 
-  const handleSubmit=()=> {
+  const handleSubmit= async()=> {
     if(handleConfirmPassword()){
       const newForm = {...newUser}
       
-    //   let { data, error } = await supabase.auth.signUp({
-    //     email: newUser.email,
-    //     password: newUser.password,
-    //     firstname: newUser.firstname,
-    //     lastname: newUser.lastname,
-    //     newsletter: newUser.newsletter
-    //   })
+
     }
   }
 
@@ -143,7 +135,7 @@ export default function SignUp() {
                   <label>
                     <div className="w-full flex justify-between">
                       <span>Mot de passe</span>
-                      <span className={` font-roboto font-bold ${strong === "correct"? "text-primary-light" : strong === "fort"? "text-valid" : "text-red" }`}>{strong}</span>
+                      <span className={` font-roboto font-bold ${strong === "correct"? "text-primary-light" : strong === "fort"? "text-vert" : "text-rouge" }`}>{strong}</span>
                     </div>
                     <input 
                     className={`
