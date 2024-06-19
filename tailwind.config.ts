@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -26,9 +27,12 @@ const config: Config = {
         'light' : 'rgb(228, 233, 247)', //'#E4E9F7'
         'dark' : 'rgb(8, 13, 27)'
       }, 
-      'foreGround': 'rgb(201, 217, 239)', //'#C9D9EF'
+      'foreground': {
+        "light":'#C9D9EF', //'#C9D9EF'
+        "dark": "#8AB2DB", 
+       }, 
       'primary':{
-        'light': 'rgb(8, 13, 27)', //'#080D1B'
+        'light': 'rgb(238, 139, 17)', //'#080D1B'
         'dark' : 'rgb(238, 139, 17)'
       }, 
       'secondary':{
@@ -42,21 +46,22 @@ const config: Config = {
         'light' : "rgb(12, 26, 39)",
         'dark' : 'rgb(216, 230, 243)'
       },
-      
+      'btnSecondary':{
+        "light":"#A9B9CF",
+        "dark":"#2F3F54",
+      },
       'shadow':"#3C3939",
-      'gris':"#D9D9D9",
-      'rouge':'rgb(126, 14, 14)',
-      'foreground':"#C9D9EF",
+      'blanc': '#F4F4F4',
+      'black': '#1E1F23',
+      'gris':"#C0C5CD",
+      'bleu': '#00A3E9',
+      'rouge':'#7E0E0E',
+      'vert':"#1EB937",
       'error':"#DD8383",
-      'valid':"#1EB937",
       "input": "#C9D4F0",
       "conversation": "#00A3E9",
-      'white': 'rgb(240, 240, 240)',
-      'black': 'rgb(5, 5, 5)',
-      'lightBlue': 'rgb(138, 178, 219)', //'#8AB2DB'
+      'lightBlue': '#7FC7D9',
       'lightpurple': 'rgb(146, 128, 255)', //'#8E80F3'
-      'blue': 'rgb(50, 17, 232)', //'#3211E8'
-      'red': 'rgb(126, 14, 14)', //'#7E0E0E'
     },
   },
   plugins: [],
