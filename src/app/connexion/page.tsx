@@ -1,12 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const router = useRouter();
 
   return (
     <>
@@ -15,7 +13,7 @@ export default function SignIn() {
 
         <form
           action=""
-          className="relative flex flex-col mt-10 mb-30 p-10 rounded-xl bg-yellow"
+          className="flex flex-col mt-10 mb-30 p-10 rounded-xl bg-foreground-light"
         >
           <label htmlFor="email">Email *</label>
           <input
@@ -39,7 +37,7 @@ export default function SignIn() {
             className="h-[50px] mt-2 mb-10 pl-4 rounded-xl bg-white"
           />
           <button
-            className="w-fit absolute left-[50%] bottom-0 translate-x-[-50%] translate-y-[50%] py-4 px-8 bg-purple text-white text-fontTitle rounded-xl"
+            className="w-fit mx-auto py-4 px-8 bg-primary-light text-texte-light text-fontTitle rounded-xl"
             type="submit"
           >
             Connexion

@@ -1,10 +1,8 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const router = useRouter();
 
   return (
     <>
@@ -18,20 +16,20 @@ export default function Home() {
         </Link>
 
         <div className="absolute flex justify-between right-1/2 top-1/2 translate-x-1/2 mt-12">
-          <button
-            className="bg-lightBlue w-60 mx-2.5 py-2.5 rounded-full text-fontTitle scale-h-102 cursor-pointer"
+          <Link
+            className="bg-lightBlue w-60 mx-2.5 py-2.5 rounded-2xl text-center text-fontTitle scale-h-102 cursor-pointer"
             type="button"
-            onClick={() => router.push("/dictionnaire-LSF")}
+            href="/dictionnaire-LSF"
           >
             Dictionnaire
-          </button>
-          <button
-            className="bg-yellow w-60 mx-2.5 py-2.5 rounded-full text-fontTitle scale-h-102 cursor-pointer"
+          </Link>
+          <Link
+            className="bg-primary-light w-60 mx-2.5 py-2.5 rounded-2xl text-center text-fontTitle scale-h-102 cursor-pointer"
             type="button"
-            onClick={() => router.push("/connexion")}
+            href="/connexion"
           >
             Se connecter
-          </button>
+          </Link>
         </div>
 
         <p className="absolute right-1/2 top-1/2 translate-x-1/2 mt-12 mt-36 w-10/12 text-center">Application de traduction de la langue de signes française</p>

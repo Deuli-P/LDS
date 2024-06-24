@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <>
       {!home && !conversation && !newconversation && (
-        <footer className="w-full p-10 bg-purple text-white">
+        <footer className="w-full p-10 bg-foreground-light text-texte-light">
           <article className="mb-10">
             <h4 className="text-fontText text-left font-black text-[20px]">Notre Projet</h4>
             <p>Intelligence Artifficielle</p>
@@ -33,6 +33,9 @@ const Footer = () => {
           </article>
 
           <p>@ LDS 2024</p>
+
+          
+          <h4 className="text-fontText text-center font-black text-[20px] mt-8">&#169; Signs Connect</h4>
         </footer>
       )}
     </>
