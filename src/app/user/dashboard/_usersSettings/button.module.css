@@ -1,0 +1,76 @@
+/* label {
+	width: 39px;
+	height: 19px;
+	position: relative;
+	display: block;
+	background: #C9D9EF;
+	border-radius: 15px;
+	box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.2),
+		inset 0px -5px 15px rgba(255, 255, 255, 0.2);
+	cursor: pointer;
+	transition: 0.3s;
+
+	&:after {
+		content: "";
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		background: #d8860b;
+		border-radius: 15px;
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+		transition: 0.3s;
+	}
+}
+
+input {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+
+	&:checked+label {
+		&:after {
+			left: 37px;
+			transform: translateX(-100%);
+			background: rgb(138, 178, 219);
+		}
+	}
+} */
+
+.Input {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+.Input:checked + .Label:after {
+	left: 37px;
+	transform: translateX(-100%);
+	background: rgb(138, 178, 219);
+}
+
+.Label {
+	width: 39px;
+	height: 19px;
+	position: relative;
+	display: block;
+	background: #C9D9EF;
+	border-radius: 15px;
+	box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.2), inset 0px -5px 15px rgba(255, 255, 255, 0.2);
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.Label:after {
+	content: "";
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	background: #d8860b;
+	border-radius: 15px;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+	transition: 0.3s;
+}
