@@ -1,5 +1,5 @@
 import React from 'react'
-import Femme from '@/../../LDS/public/assets/images/avatar/blonde-lamy.png'
+import Femme from '@/../public/assets/images/avatar/blonde-lamy.png'
 import Image from 'next/image';
 
 const Avatar = () => {

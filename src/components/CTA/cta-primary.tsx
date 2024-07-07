@@ -8,7 +8,7 @@ import { CTAType } from '@/lib/types'
 const CtaPrimary = ({children, onClick}:CTAType) => {
   return (
     <button 
-        className='py-4 px-6 rounded-lg bg-secondary text-blanc font-bold font-roboto'
+        className='w-full py-3 px-6 rounded-3xl bg-primary-light  text-texte-light font-bold font-roboto'
         onClick={onClick}
     >
         {children}
